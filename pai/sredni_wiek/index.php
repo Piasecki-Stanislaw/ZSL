@@ -22,30 +22,29 @@
 if(!empty($_POST['person'])) {
    echo "<h3>Ilość osób w rodzinie: $_POST[person]</h3>";
     echo $_POST['person'];
-    echo <<< FORMAGEPERSON
-    <form method="post">
-    FORMAGEPERSON;
-        for($i=1; $i < $_POST['person']; i++){
+    echo '<form method="post">';
+
+        for($i=0; $i < $_POST['person']; $i++){
             echo "<input type=\"number\" name=\"age$i\" placeholder=\"Podaj wiek osoby $i\"><br><br>";
         }
-        echo '<input type="submit" name="buttonAVG" value="Oblicz średni wiek">'
-    echo <<< FORMAGEPERSON
-    
-    </form>
-FORMAGEPERSON;
-}
+        echo '<input type="submit" name="buttonAVG" value="Oblicz średni wiek">';
+echo '</form>';
+    }
+
 if (isset($_POST['buttonAVG'])){
    // print_r($_POST);
    $ageAVG=0;
    foreach($_POST as $key => $value){
        if($key != 'buttonAVG'){
-       echo $ageAVG=$ageAVG+$value;
+        $ageAVG=$ageAVG+$value;
        }
    }
-   echo "Średni wiek: $ageAVG";
+   $liczbal=count($_POST)-1;
+   $srednia=$ageAVG/$liczbal;
+   $srednia=number_format($srednia,2,".");
+   echo "Średni wiek: $srednia";
+echo "<h4><a href='index.php'>POCZĄTEK</a></h4>";
 }
-//Dodać z zaokrągleniem wyniku do 2 miejsc po przecinku (number_format)
-//Dodać hiperłącze wyświetlające początkowy formularz
 ?>
 </body>
 </html>
