@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styl.css">
+    <title>Proste działania</title>
+  </head>
+  <body>
+  <div class="baner"><a href="index.html"><img src="baner.jpg" alt="Baner"></a></div>
+<div class="lewy">Menu<br>
+<a href="strona1.html">Proste działania</a><br>
+<a href="#">Potęgowanie</a>
+</div>
+<h1>PROSTE DZIAŁANIA</h1>
+<p>Podaj pierwszą liczbę: <input type="number" id="l1"></p>
+<p>Podaj drugą liczbę: <input type="number" id="l2"></p>
+<p>
+<button type="button" id="dodawanie">DODAWANIE</button>
+<button type="button" id="odejmowanie">ODEJMOWANIE</button>
+<button type="button" id="mnożenie">MNOŻENIE</button>
+<button type="button" id="dzielenie">DZIELENIE</button>
+</p><br>
+<div id="wynik"></div>
+<script>
+var l1=document.getElementById("l1");
+var l2=document.getElementById("l2");
+var dodawanie=document.getElementById("dodawanie");
+var odejmowanie=document.getElementById("odejmowanie");
+var mnożenie=document.getElementById("mnożenie");
+var dzielenie=document.getElementById("dzielenie");
+dodawanie.onclick=function(){
+  if ( l1!="" && l2!="") {
+        q=parseFloat(l1);
+        w=parseFloat(l2);
+        var a=q+w;
+        wynik.InnerHTML=a;
+      }
+  else {
+    alert("Wypełnij obydwa pola!");
+  }
+}
+</script>
+  </body>
+</html>
