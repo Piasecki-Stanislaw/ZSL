@@ -1,2 +1,2 @@
 # ZSL
-Zbitki kodu, które napisałem podczas nauki w ZSŁ
+Zbitki kodu, które były mi do czegoś potrzebne podczas nauki w ZSŁ
